@@ -65,9 +65,9 @@ function validerDesc(){
 }
 
 
-function afficherMail(nom, myEmail, desc, title, tel){
+function afficherMail(myEmail, desc, title, tel){
 
-    let mailto = `mailto:${myEmail} / Nom ${nom}?subject=${title}&body=${desc}. je suis au numero ${tel}`
+    let mailto = `mailto:${myEmail}?subject=${title}&body=${desc}. je suis au numero ${tel}`
     location.href = mailto
 
 }
@@ -83,46 +83,59 @@ function validerInfosForm(){
 
 myForm.addEventListener ('submit', (event)=>{
 
-    if(nom.value.trim() === ""){
-        validerNomValeur()
-        event.preventDefault()
-    }
-
-    if(nom.length < 2){
-        validerNonLong()
-        event.preventDefault()
-    }
-
-    if(title.value.trim() === ""){
-        validerTitleValeur()
-        event.preventDefault()
-    }
-
-    if(title.length < 5){
-        validerTitleLong()
-        event.preventDefault()
-    }
-
-    if(email.value.trim() === ""){
-        validerEmailValeur()
-        event.preventDefault()
-    }
-
-    if(!myRegexEmail.test(email)){
-        validerEmailFormat()
-        event.preventDefault()
-    }
-
-    if(desc.value.trim() === ""){
-        validerDesc()
-        event.preventDefault()
-    }
+    event.preventDefault()
 
     if(desc.value.trim() === "" && email.value.trim() === "" && nom.value.trim() === "" && title.value.trim() === ""){
+
         validerInfosForm()
+    }else if(desc.value.trim() !== "" && email.value.trim() !== "" && nom.value.trim() !== "" && title.value.trim() !== ""){
+
         event.preventDefault()
+
+        if(nom.value.trim() === ""){
+            
+            validerNomValeur()
+            event.preventDefault()
+        }
+    
+        if(nom.length < 2){
+
+            validerNonLong()
+            event.preventDefault()
+        }
+    
+        if(title.value.trim() === ""){
+
+            validerTitleValeur()
+            event.preventDefault()
+        }
+    
+        if(title.length < 5){
+ 
+            validerTitleLong()
+            event.preventDefault()
+        }
+    
+        if(email.value.trim() === ""){
+
+            validerEmailValeur()
+            event.preventDefault()
+        }
+    
+        if(!myRegexEmail.test(email)){
+ 
+            validerEmailFormat()
+            event.preventDefault()
+        }
+    
+        if(desc.value.trim() === ""){
+
+            validerDesc()
+            event.preventDefault()
+        }
+
+        afficherMail(myEmail, desc, title, tel)
     }
 
 })
 
-afficherMail()
