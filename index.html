@@ -100,6 +100,12 @@
 									<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"> 50% </div>
 								</div>
 							</div>
+							<div class="bg-dark mt-2 p-2 rounded-3">
+								<h2><span><i class="fa-brands fa-laravel text-info"></i></span> Laravel 10 </h2>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"> 20% </div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-12">
@@ -116,43 +122,23 @@
 	       		<h2 id="portfolio">Mon portfolio</h2>
 	        	<h5>Projets</h5>
 	        	<div class="row gy-4 mt-4">
-	          		<div class="col-lg-3 col-md-3 col-sm-12">
+	          		<div class="col-lg-6 col-md-3 col-sm-12">
 	            		<div class="card h-100 w-100">
-	            			<img src="imgs/Ressources-humaines-5.jpg" class="card-img-top" alt="..."/>
+	            			<img src="imgs/image_facture.jpeg" class="card-img-top" alt="..."/>
 	            			<div class="card-body">
 	            				<h4 class="card-title">Projet 1</h4>
-	            				<p class="card-text">Realisation de site web</p>
-	            				<a href="../gest_emp/admin/connect_admin.php" class="btn btn-primary">visiter</a>
+	            				<p class="card-text">Realisation d'apprication de facturation</p>
+	            				<a href="https://godek.degeek.dev" class="btn btn-primary">visiter</a>
 	            			</div>
 	            		</div>
 	          		</div>
-	          		<div class="col-lg-3 col-md-3 col-sm-12">
+	          		<div class="col-lg-6 col-md-6 col-sm-12">
 	            		<div class="card h-100 w-100">
 	            			<img src="imgs/arton10.jpg" class="card-img-top" alt="..."/>
 	            			<div class="card-body">
 	            				<h4 class="card-title">Projet 2</h4>
-	            				<p class="card-text">Realisation de site web</p>
-	            				<a href="../gest_edu/prof/connect_prof.php" class="btn btn-primary">visiter</a>
-	            			</div>
-	            		</div>
-	          		</div>
-	          		<div class="col-lg-3 col-md-3 col-sm-12">
-	            		<div class="card h-100 w-100">
-	            			<img src="imgs/montar-uma-loja-virtualjpg.jpg" class="card-img-top" alt="..."/>
-	            			<div class="card-body">
-	            				<h4 class="card-title">Projet 3</h4>
-	            				<p class="card-text">Realisation de site web</p>
-	            				<a href="#" class="btn btn-primary">Voir plus...</a>
-	            			</div>
-	            		</div>
-	          		</div>
-	          		<div class="col-lg-3 col-md-3 col-sm-12">
-	            		<div class="card h-100 w-100">
-	            			<img src="imgs/code.png" class="card-img-top" alt="..."/>
-	            			<div class="card-body">
-	            				<h4 class="card-title">Projet 4</h4>
-	            				<p class="card-text">Realisation de site web</p>
-	            				<a href="#" class="btn btn-primary">Voir plus...</a>
+	            				<p class="card-text">Realisation d'application de gestion d'etudiant <span class="fw-bold text-primary">(En cours ... )</span></p>
+	            				<a href="" class="btn btn-primary">Voir de code source</a>
 	            			</div>
 	            		</div>
 	          		</div>
@@ -170,37 +156,30 @@
 	    			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 	    				<img src="imgs/Construire-son-projet.png" class="h-100 w-100"/>
 	    			</div>
-	    			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-	    				<form method="POST" action="" id="myForm">
-	    					<table class="container">
-		    					<tr class="row">
-	    							<td class="col">
-	    								<label class="form-label" for="email">Adresse mail</label>
-		    							<input class="form-control " type="email" name="email" id="email"/>
-	    							</td>		
-		    					</tr>
-		    					<tr class="row">
-	    							<td class="col">
-	    								<label class="form-label" for="desc">Description</label>
-		    							<textarea class="form-control" type="text" name="desc" id="desc"></textarea>
-	    							</td>		
-		    					</tr>
-								<tr class="row">
-	    							<td class="col">
-	    								<span id="myError"></span>
-	    							</td>		
-		    					</tr>
-		    					<tr class="row">
-	    							<td class="col">
-	    								<input class="btn btn-primary form-control" type="submit" name="submit" value="Envoyer"/>
-	    							<td>
-	    							<td class="col">
-	    								<input class="btn btn-danger form-control" type="reset" name="reset" value="Annuler"/>
-	    							</td>		
-		    					</tr>
-	    					</table>
+	    			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 shadow p-3 rounded-2 bg-dark">
+	    				<form id="myForm">
+	    					<label class="form-label text-primary" for="name">Votre nom</label>
+		    				<input class="form-control " type="text" name="name" id="name"/>
+
+							<label class="form-label text-primary" for="name">Votre numero de téléphone (facultatif)</label>
+		    				<input class="form-control " type="tel" name="name" id="name" />
+
+	    					<label class="form-label text-primary" for="email">Votre adresse mail</label>
+		    				<input class="form-control " type="email" name="email" id="email"/>
+
+	    					<label class="form-label text-primary" for="title">L'objet du message</label>
+		    				<input class="form-control " type="text" name="title" id="title"/>
+
+	    					<label class="form-label text-primary" for="desc">Votre message</label>
+		    				<textarea class="form-control" type="text" name="desc" id="desc"></textarea>
+							<div class="mt-3">
+								<button class="btn btn-primary form-control">Envoyer</button>
+							</div>
+							<div class="mt-3 text-center fw-bold" id="myError">
+								
+							</div>
 	    				</form>
-	    			</div>
+					</div>
 	    		</div>
 
 	    	</div>
@@ -210,36 +189,36 @@
 	<footer style="background-color: rgb(21, 21, 22);">
 		<div class="py-4">
 			<div class="container">
-				<div class="text-center" style=" color: rgb(17, 150, 199);">&copy; GAAJ 2023</div>
+				<div class="text-center fw-lighter fs-5" style=" color: rgb(141, 213, 239);">&copy; Godek 2023</div>
 				<div class="row mt-5">
-					<div class="col-4">
+					<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
 						<a class="narbar-brand text-uppercase fw-bold" href="porfolio.html" style="text-decoration: none;"><span class=" bg-primary p-1 rounded-3 text-light" style="font-size: 50px;">g</span><span style="font-size: 30px; color: rgb(249, 254, 255);">audet Andre</span></a>
 					</div>
-					<div class="col-4">
+					<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
 						<div class="row ">
-							<i class="fa-solid fa-house fa-2x col-4 text-center text-light"></i>
-							<p class="col-8 text-info">
+							<i class="fa-solid fa-house fa-2x col-4 text-center text-primary-emphasis"></i>
+							<p class="col-8 text-light">
 								Abidjan(Angre)
 							</p>
 						</div>
 						<div class="row mt-2">
-							<i class="fa-solid fa-phone-flip fa-2x col-4 text-center text-light"></i>
-							<p class="col-8 text-info">
+							<i class="fa-solid fa-phone-flip fa-2x col-4 text-center text-primary-emphasis"></i>
+							<p class="col-8 text-light">
 								+225 0103286759 / 0767523346
 							</p>
 						</div>
 						<div class="row mt-2">
-							<i class="fa-solid fa-envelope fa-2x col-4 text-center text-light"></i>
-							<p class="col-8 text-info">
+							<i class="fa-solid fa-envelope fa-2x col-4 text-center text-primary-emphasis"></i>
+							<p class="col-8 text-light">
 								andregaudet225@gmail.com
 							</p>
 						</div>
 					</div>
-					<div class="col-4 text-end">
+					<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 text-end">
 						<ul class="list-inline">
-							<li class="list-inline-item"><a href="https://www.linkedin.com/in/andre-junior-gaudet-048b3a286"><i class="fa-brands fa-linkedin fa-2x" style="color: rgb(5, 182, 209);"></i></a></li>
-							<li class="list-inline-item"><a href="https://www.facebook.com/azolryandrejunior.gaudet"><i class="fa-brands fa-facebook fa-2x" style="color: blue;"></i></a></li>
-							<li class="list-inline-item"><a href="https://www.github.com/gaudet"><i class="fa-brands fa-github fa-2x" style="color: rgb(255, 255, 255);"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.linkedin.com/in/andre-junior-gaudet-048b3a286" title = "mon compte linkedin"><i class="fa-brands fa-linkedin fa-2x" style="color: rgb(5, 182, 209);"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.facebook.com/azolryandrejunior.gaudet" title = "mon compte facebook"><i class="fa-brands fa-facebook fa-2x" style="color: blue;"></i></a></li>
+							<li class="list-inline-item"><a href="https://www.github.com/gaudet" title = "mon compte github"><i class="fa-brands fa-github fa-2x" style="color: rgb(255, 255, 255);"></i></a></li>
 						</ul>
 					</div>
 				</div>
